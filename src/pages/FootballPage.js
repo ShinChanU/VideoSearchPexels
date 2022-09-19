@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import ReactHlsPlayer from 'react-hls-player';
 import ReactPlayer from 'react-player/lazy';
 import styled from 'styled-components';
 
