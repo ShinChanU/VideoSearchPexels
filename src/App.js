@@ -1,14 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import NavBar from 'components/NavBar.js';
 import OpenColor from 'open-color';
-import FootballPage from 'pages/FootballPage.js';
+import VideoPage from 'pages/VideoPage.js';
+import Footer from 'components/Footer';
 
 const Container = styled.div`
+  height: 100%;
   min-height: 100vh;
   width: 100%;
-  background: ${OpenColor.indigo[1]};
+  background: ${OpenColor.teal[0]};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,15 +17,11 @@ const Container = styled.div`
 
 function App() {
   return (
-    <BrowserRouter>
-      <Container>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<FootballPage />} />
-          <Route path="*" element={<FootballPage />} />
-        </Routes>
-      </Container>
-    </BrowserRouter>
+    <Container>
+      <NavBar />
+      <VideoPage />
+      <Footer />
+    </Container>
   );
 }
 
