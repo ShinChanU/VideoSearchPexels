@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 import oc from 'open-color';
 
@@ -102,12 +101,7 @@ const Video = ({ loading, getVideoData, videoData, setVideoData }) => {
             const { id, link } = e.video_files[0];
             return (
               <VideoEl key={id}>
-                <ReactPlayer
-                  url={link}
-                  controls={true}
-                  width="100%"
-                  height="400px"
-                />
+                <video src={link} controls width="100%" height="400px" />
               </VideoEl>
             );
           })}
