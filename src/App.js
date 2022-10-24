@@ -8,7 +8,7 @@ import FootballPage from 'pages/FootballPage.js';
 const Container = styled.div`
   min-height: 100vh;
   width: 100%;
-  background: ${OpenColor.indigo[1]};
+  background: ${OpenColor.pink[0]};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,6 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<FootballPage />} />
-          <Route path="*" element={<FootballPage />} />
         </Routes>
       </Container>
     </BrowserRouter>

@@ -5,7 +5,7 @@ import oc from 'open-color';
 
 const Container = styled.div`
   width: 100%;
-  background: ${oc.indigo[0]};
+  background: ${oc.red[2]};
   padding: 0px 30px;
 `;
 
@@ -45,9 +45,7 @@ const LinkDiv = styled(Link)`
 const NavBar = () => {
   return (
     <Container>
-      <Header>
-        <LinkDiv to="/football">[NEW] ⚽축구</LinkDiv>
-      </Header>
+      <Header>{/* <LinkDiv to="/football">[NEW] ⚽축구</LinkDiv> */}</Header>
     </Container>
   );
 };
