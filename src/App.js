@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import NavBar from 'components/NavBar.js';
 import OpenColor from 'open-color';
-import FootballPage from 'pages/FootballPage.js';
+import FootballPage from 'pages/FootballPage';
+// import FootballPage from 'pages/FootballPage.js';
 
 const Container = styled.div`
   min-height: 100vh;

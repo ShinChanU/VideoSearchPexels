@@ -4,11 +4,12 @@ const SPOTVURI = 'https://www.spotvnow.co.kr';
 
 let links = [];
 let names = [];
+var test3 = 'A';
 
 export const getCrawlingNowMatch = async () => {
   try {
     const browser = await puppeteer.launch({
-      headless: true,
+      headless: false,
       executablePath:
         'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
     });
@@ -33,8 +34,14 @@ export const getCrawlingNowMatch = async () => {
       '#intro > div.form-container > div.form > div:nth-child(5) > span:nth-child(2) > img:nth-child(2)',
     );
 
-    await page.$eval('#id', (e) => (e.value = 'tlscksdn963'));
-    await page.$eval('#pw', (e) => (e.value = 'dkrak963@'));
+    let id = process.env.NAVER_ID;
+    let password = process.env.NAVER_PASSWORD;
+    await page.type('#id', id);
+    await page.type('#pw', password);
+
+    // await page.$eval('#id', (e) => (e.value = "id"));
+    // await page.$eval('#id', (e) => (e.value = "pw"));
+
     await page.click('#log\\.login > span');
 
     await page.waitForTimeout(3000);
